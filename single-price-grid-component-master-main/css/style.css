@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: hsl(162, 43%, 78%);
+    font:16px 'Karla',sans-serif;
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.container{
+    width: 50rem;
+    height: 30rem;
+    display: grid;
+    grid-template-areas: "section-1 section-1" "section-1 section-1"
+    "section-2 section-3"
+    "section-2 section-3";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    border-radius: 1rem;
+}
+
+  .section-1 {
+    grid-area: section-1;
+    background-color:#f3efef;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3.5rem;
+
+  }
+  .section-2 {
+    grid-area: section-2;
+    background-color:#1bcac7;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 3.5rem;
+    border-bottom-left-radius: 1rem;
+  }
+  .section-3 {
+    grid-area: section-3;
+    background-color:#20d8d5;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 3.5rem;
+    border-bottom-right-radius:1rem;
+  }
+
+/*comunity*/
+
+.community,.subscription,.why-us{
+  width:100%;
+  height: auto;
+
+}
+.community-title{
+    font-size: 1.5em;
+    margin: 1rem 0;
+    color: #1dd1ce;
+
+}
+.community-subtitle{
+    margin: 1rem 0;
+    color:#8ba125;
+}
+.community-paragraph{
+    color: #6d6b6b;
+    line-height: 1.7rem;
+}
+
+/*subscription*/
+
+.subscription-title,.why-us-title{
+  font-size: 1.1em;
+  margin: 1rem 0;
+  color: #fff;
+}
+.subscription-value {
+  font-size: 2em;
+  color: #fff;
+}
+span {
+  height:200px;
+  font-size: 0.5em;
+  color: #d1cccc;
+  
+}
+.subscription-paragraph,.whyus-paragraph{
+  color: #fff;
+  margin-bottom: 1rem;
+  line-height: 1.7rem;
+}
+.btn-sign-up{
+  background-color: #c0df34;
+  box-shadow: 0.5rem 0.2rem 1rem  rgb(75, 75, 75);
+  color: #fff;
+  border: none;
+  width:15rem;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.btn-sign-up:hover{
+  background-color: #abce0e;
+}
+
+@media(max-width:800px){
+  .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 3%;
+
+  }
+ .section-1,.section-2,.section-3{
+     width: 95%;
+     height:100vh;
+     padding: 0 1rem;
+     border-radius: 4px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ .community,.subscription,.why-us{
+   height:40vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 0 5%;
+   align-items: center;
+
+ }
+}
+@media(max-width:400px){
+  .community,.subscription,.why-us{
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+}
